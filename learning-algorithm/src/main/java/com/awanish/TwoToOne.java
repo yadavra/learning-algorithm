@@ -1,5 +1,7 @@
 package com.awanish;
 
+import java.util.Stack;
+
 public class TwoToOne {
 
 
@@ -32,5 +34,28 @@ public class TwoToOne {
 		}
 		return actualResult.toString();
 	}
+	
+private int calculate(Stack<Integer> stack , String str){
+        
+        int a = stack.pop();
+        int b = stack.pop();
+        int result =0;
+        switch(str){
+        case "*": 
+        	result=a*b;
+         break ;
+        case "+": 
+        	result=a+b;
+         break ;
+        case "-": 
+        	result=a-b;
+         break ;
+        case "/": 
+        	result=a/b;
+         break ;
+        }
+		return result;
+        
+    }
 
 }
